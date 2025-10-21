@@ -1,10 +1,10 @@
 import time
+import base64
+import config
 from openai import OpenAI
 from pathlib import Path
-import base64
 from utils.resizer import resize_image
-import config
-import sys
+
 
 openai = OpenAI(api_key=config.OPENAI_API_KEY)
 
@@ -38,7 +38,7 @@ if image_data:
 video = openai.videos.create(
     model="sora-2",
     prompt="The cat turns around and then walks out of the frame.",
-    input_reference=("siamese.png"),
+    input_reference=Path(f"./siamese.png"),
     size="720x1280",
     seconds=4,
 )

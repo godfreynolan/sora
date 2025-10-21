@@ -4,7 +4,7 @@ app.py - basic Sora call
 
 app1.py - basic call with progress bar
 
-app2.py - parameters
+app2.py - parameters w/improved prompt
 
 app3.py - w/input reference
 

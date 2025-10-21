@@ -67,7 +67,7 @@ video = openai.videos.create(
 print("Video generation started:", video)
 print("Video ID:", video.id)
 
-time.sleep(200)  # This may need to be increased
+time.sleep(600)  # This may need to be increased
 
 content = openai.videos.download_content(video.id, variant="video")
 content.write_to_file("video.mp4")

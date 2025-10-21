@@ -1,0 +1,12 @@
+Sora API Meetup Oct '25 https://www.meetup.com/practical-chatgpt-api-programming/events/311438781/
+
+app.py - basic Sora call
+
+app1.py - basic call with progress bar
+
+app2.py - parameters
+
+app3.py - w/input reference
+
+app4.py - remix
+

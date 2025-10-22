@@ -169,21 +169,17 @@ video1 = openai.videos.create(
 video1 = wait_for_video_completion(video1)
 download_and_save_video(video1, "storyboard1.mp4")
 
-video2 = openai.videos.create(
-    model="sora-2-pro",
+video2 = openai.videos.remix(
+    video_id=video1.id,
     prompt=scene2_prompt,
-    size="1280x720",
-    seconds="12",
 )
 
 video2 = wait_for_video_completion(video2)
 download_and_save_video(video2, "storyboard2.mp4")
 
-video3 = openai.videos.create(
-    model="sora-2-pro",
+video3 = openai.videos.remix(
+    video_id=video2.id,
     prompt=scene3_prompt,
-    size="1280x720",
-    seconds="12",
 )
 
 video3 = wait_for_video_completion(video3)

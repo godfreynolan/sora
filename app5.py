@@ -177,8 +177,9 @@ video2 = openai.videos.remix(
 video2 = wait_for_video_completion(video2)
 download_and_save_video(video2, "storyboard2.mp4")
 
+# always point at the first video when remixing 
 video3 = openai.videos.remix(
-    video_id=video2.id,
+    video_id=video1.id,
     prompt=scene3_prompt,
 )
 
